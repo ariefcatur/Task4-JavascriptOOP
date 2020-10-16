@@ -1,11 +1,21 @@
 class Student {
-    constructor({name, age, gender, dateOfBirth, nomor, hobies}) {
+    constructor({name, age, gender, dateOfBirth, id, hobies}) {
         this.name = name ;
         this.age = age ;
-        this.gender = ""
+        // this.gender = gender ;
         this.dateOfBirth = dateOfBirth ;
-        this.nomors = nomor ;
+        this.id = id ;
         this.hobies = []
+       switch(gender) {
+            case "Male" :
+                this.gender = gender
+                break;
+            case "Female" :
+                this.gender = gender
+                break;
+            default:
+                this.gender = "Unknown"
+        }
     }
 
     set studentName(newName) {
@@ -34,7 +44,7 @@ class Student {
     }
 
     set studentId(newId) {
-        this.nomor = newId
+        this.id = newId
     }
 
     set studentHobies(newHoby) {
@@ -54,8 +64,7 @@ class Student {
     }
 
     get studentInfo() {
-        return `${this.name} adalah siswa berumur ${this.age} lahir  pada \n
-        ${this.dateOfBirth} berjenis kelamin ${this.gender} dengan nomor siswa ${this.id} serta memiliki hobi ${this.hobies}`  
+        return `${this.name} adalah siswa berumur ${this.age} tahun lahir  pada ${this.dateOfBirth} berjenis kelamin ${this.gender} dengan nomor siswa ${this.id} serta memiliki hobi ${this.hobies}`  
     }
 }
 
@@ -64,6 +73,8 @@ const student = new Student ({
     age : 15 ,
     gender : "banci" ,
     dateOfBirth : "17 Agustus 2005" ,
-    nomor : 192768,
-    hobies : ["belajar", "War", "Politic"]
+    id : 192768,
+    hobies : ["Perang", "Baku hantam", "Tawuran"]
 })
+
+console.log (student.studentInfo)
