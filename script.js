@@ -70,6 +70,7 @@ const myFunction = () => {
 
 let nama = document.getElementById("nama").value
 let ttl = document.getElementById("ttl").value
+let gender = document.getElementById("gender").value
 let umur = document.getElementById("umur").value
 let ktp = document.getElementById("ktp").value
 let hobi = document.getElementById("hobi").value
@@ -77,7 +78,7 @@ let hobi = document.getElementById("hobi").value
 let student = new Student ({
     name  : nama,
     age : umur ,
-    gender : umur ,
+    gender : gender ,
     dateOfBirth : ttl ,
     id : ktp,
     hobies : hobi,
