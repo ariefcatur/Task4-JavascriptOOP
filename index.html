@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+  <title>Tugas 4</title>
 </head>
 <body>
-    <script src="script.js"></script>
+  <h3>STUDENTS DATA</h3>
+
+<div>
+  
+    <label for="nama">Name</label>
+    <input type="text" id="nama" name="firstname" placeholder="Your name..">
+
+    <label for="ttl">Date Of Birth</label>
+    <input type="text" id="ttl" name="ttl" placeholder="DD/MM/YY..">
+
+    <label for="umur">Age</label>
+    <input type="text" id="umur" name="usia" placeholder="Your age..">
+    
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    
+    <label for="ktp">Student ID</label>
+    <input type="text" id="ktp" name="id" placeholder="Your id..">
+  
+    <label for="hobi">Hobies</label>
+    <input type="text" id="hobi" name="hobi" placeholder="Your hobies..">
+    
+    <button type="submit" onclick="studentInfo()">Submit</button>
+   
+    <p id="demo"></p>
+
+
+
+</div>
+<script src="script.js"></script>
 </body>
 </html>
