@@ -1,48 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <title>Tugas 4</title>
 </head>
 <body>
-  <h3>STUDENTS DATA</h3>
-
-<div>
   
-    <label for="nama">Name</label>
-    <input type="text" id="nama" name="firstname" placeholder="Your name..">
-
-    <label for="ttl">Date Of Birth</label>
-    <input type="text" id="ttl" name="ttl" placeholder="DD/MM/YY..">
-
-    <label for="umur">Age</label>
-    <input type="text" id="umur" name="usia" placeholder="Your age..">
+  <div class="container" id="input_selection">
+    <h3>STUDENTS DATA</h3>
+    <div class="form-group">
+      <label for="nama">Name</label>
+      <input type="text" class="form-control" id="nama" name="firstname" value="Egbert Ganadhi" placeholder="Your name..">
+    </div>  
     
-    <label for="gender">Gender</label>
-    <select id="gender" name="gender">
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-    </select>
+    <div class="form-group">
+      <label for="ttl">Date Of Birth</label>
+      <input type="date" class="form-control" id="ttl" name="ttl" value="2020-10-18">
+    </div>
+
+    <div class="form-group">
+      <label for="umur">Age</label>
+      <input type="text" class="form-control" id="umur" name="usia" placeholder="Your age.." value="22">
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select class="form-control" id="gender" name="gender">
+        <option value="male" selected>Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="ktp">Student ID</label>
+      <input type="text" class="form-control" id="ktp" name="id" placeholder="Your id.." value="123456789">
+    </div>
+
+    <div class="form-group">
+      <label for="hobi">Hobies</label>
+      <input type="text" class="form-control" id="hobi" name="hobi" placeholder="Your hobies..">
+    </div>
     
-    <label for="ktp">Student ID</label>
-    <input type="text" id="ktp" name="id" placeholder="Your id..">
-  
-    <label for="hobi">Hobies</label>
-    <input type="text" id="hobi" name="hobi" placeholder="Your hobies..">
-    
-    <button type="submit" onclick="myFunction()">Submit</button>
-   
-    <p id="demo"></p>
-    <p id="student"></p>
-
-    
+    <button type="submit" onclick="formSubmit()">Submit</button>
+  </div>
 
 
+  <div class="container my-5" id="draft_selection">
+    <div class="row">
+      <div class="col-12">
+        <table class="table">
+          <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Student ID</th>
+                    <th>Hobies</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTable">
+               
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 
-</div>
-<script src="script.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 </html>
